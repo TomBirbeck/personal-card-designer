@@ -1,0 +1,4 @@
+.bottom-menu {
+    grid-area: bottom-menu;
+    background-color: greenyellow;
+}

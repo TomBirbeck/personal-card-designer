@@ -1,0 +1,4 @@
+.right-menu {
+    grid-area: right-menu;
+    background-color: blue;
+}

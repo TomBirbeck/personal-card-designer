@@ -1,0 +1,4 @@
+.top-menu {
+    grid-area: top-menu;
+    background-color: yellow;
+}

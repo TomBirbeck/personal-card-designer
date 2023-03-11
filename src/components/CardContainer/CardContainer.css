@@ -1,0 +1,6 @@
+.container {
+    grid-area: card-area;
+    background-color: orange;
+    display: grid;
+    place-items: center;
+}

@@ -1,5 +1,7 @@
+import './LeftMenu.css'
+
 const LeftMenu = () => {
-    return (<div>
+    return (<div className="left-menu">
         <h2>left menu</h2>
     </div>
     )

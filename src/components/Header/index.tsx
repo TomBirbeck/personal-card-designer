@@ -1,5 +1,7 @@
+import '../Header/Header.css'
+
 const Header = () => {
-    return <h1>Header</h1>
+    return <h1 className="header">Header</h1>
 }
 
 export default Header

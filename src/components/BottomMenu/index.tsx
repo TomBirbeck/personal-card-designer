@@ -1,6 +1,8 @@
+import '../BottomMenu/BottomMenu.css'
+
 const BottomMenu = () => {
     return (
-        <div>
+        <div className="bottom-menu">
             <h2>bottom menu</h2>
         </div>
     )

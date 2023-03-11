@@ -1,6 +1,8 @@
+import '../TopMenu/TopMenu.css'
+
 const TopMenu = () => {
     return (
-        <div>
+        <div className='top-menu'>
             <h2>top menu</h2>
         </div>
     )

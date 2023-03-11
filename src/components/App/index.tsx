@@ -1,23 +1,20 @@
-import logo from '../../logo.svg';
+import BottomMenu from '../BottomMenu';
+import CardContainer from '../CardContainer';
+import Header from '../Header';
+import LeftMenu from '../LeftMenu';
+import RightMenu from '../RightMenu';
+import TopMenu from '../TopMenu';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Header/>
+     <TopMenu/>
+     <LeftMenu/>
+     <CardContainer/>
+     <RightMenu/>
+     <BottomMenu/>
     </div>
   );
 }

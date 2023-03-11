@@ -1,4 +1,11 @@
 .left-menu {
     grid-area: left-menu;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selections {
+    width: 50%;
 }

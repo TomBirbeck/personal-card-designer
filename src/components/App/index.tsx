@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import BottomMenu from '../BottomMenu';
 import CardContainer from '../CardContainer';
 import Header from '../Header';
@@ -5,9 +6,12 @@ import LeftMenu from '../LeftMenu';
 import RightMenu from '../RightMenu';
 import TopMenu from '../TopMenu';
 import './App.css';
+import cardDesignContext from '../../context';
 
 function App() {
+  const cardProperties = useState({})
   return (
+    <cardDesignContext.Provider value={cardProperties}>
     <div className="App">
      <Header/>
      <TopMenu/>
@@ -16,6 +20,7 @@ function App() {
      <RightMenu/>
      <BottomMenu/>
     </div>
+    </cardDesignContext.Provider>
   );
 }
 

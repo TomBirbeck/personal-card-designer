@@ -1,34 +1,37 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState, useContext } from 'react'
 import './LeftMenu.css'
+import cardDesignContext from '../../context';
 
 const LeftMenu = () => {
-    const [layout, setLayout] = useState<number>(1);
-    const [size, setSize] = useState<number>(200);
-    const [font, setFont] = useState<string>('sans-serif');
-    const [fontSize, setFontSize] = useState<number>(16);
-    const [textAlign, setTextAlign] = useState<string>('left');
+    const [cardDesign, setCardDesign] = useState({layout: 1, size: 200, font: 'sans-serif', fontSize: 16, textAlign: 'left'})
+    const [cardProperties, setCardProperties] = useContext(cardDesignContext)
 
     const handleLayout = (e: ChangeEvent<HTMLSelectElement>) => {
-        setLayout(Number(e.target.value));
+        setCardDesign({...cardDesign, layout: Number(e.target.value)})
+        setCardProperties({...cardProperties, layout: Number(e.target.value)})
     }
-
+    
     const handleCardSize = (e: ChangeEvent<HTMLSelectElement>) => {
-        setSize(Number(e.target.value));
+        setCardDesign({...cardDesign, size: Number(e.target.value)})
+        setCardProperties({...cardProperties, size: Number(e.target.value)})
     }
-
+    
     const handleFont = (e: ChangeEvent<HTMLSelectElement>) => {
-        setFont(e.target.value);
+        setCardDesign({...cardDesign, font: e.target.value})
+        setCardProperties({...cardProperties, font: e.target.value})
     }
-
+    
     const handleFontSize = (e: ChangeEvent<HTMLSelectElement>) => {
-        setFontSize(Number(e.target.value));
+        setCardDesign({...cardDesign, fontSize: Number(e.target.value)})
+        setCardProperties({...cardProperties, size: Number(e.target.value)})
     }
-
+    
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
-        setTextAlign(e.target.value);
+        setCardDesign({...cardDesign, textAlign: e.target.value})
+        setCardProperties({...cardProperties, font: e.target.value})
     }
 
-    console.log({layout, size, font, fontSize, textAlign});
+    console.log({cardDesign, cardProperties});
 
     return (<div className="left-menu">
         <h2>left menu</h2>

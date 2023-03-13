@@ -1,13 +1,9 @@
 import { ChangeEvent, useContext, useState } from 'react'
-import { HexColorPicker } from "react-colorful";
 import cardDesignContext from '../../context'
 import '../BottomMenu/BottomMenu.css'
 
 const BottomMenu = () => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
-    const [chooseColor, setChooseColor] = useState(true)
-    const [color, setColor] = useState("#aabbcc");
-
 
     const handleBorder = () => {
         setCardProperties({...cardProperties, border: !cardProperties.border})
@@ -25,8 +21,8 @@ const BottomMenu = () => {
         setCardProperties({...cardProperties, borderRadius: Number(e.target.value)})
     }
 
-    const handleBorderColor = (e: any) => {
-        setCardProperties({...cardProperties, borderColor: color})
+    const handleBorderColor = (e: ChangeEvent<HTMLInputElement>) => {
+        setCardProperties({...cardProperties, borderColor: e.target.value})
     }
 
 
@@ -66,10 +62,7 @@ const BottomMenu = () => {
             <option value={1.5}>24px</option>
             <option value={2}>32px</option>
         </select>
-        { chooseColor ? 
-        <div>
-        <HexColorPicker color={color} onChange={setColor}/> <button onClick={handleBorderColor}>Use colour</button>
-        </div> : <p>border colour</p>}
+        <input type={'color'} onChange={handleBorderColor}/>
         </div>
     )
 }

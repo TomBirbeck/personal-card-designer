@@ -21,6 +21,9 @@ function App() {
     borderWidth: 1,
     borderRadius: 0,
     borderColor: 'black',
+    backgroundStyle: 'solid',
+    backgroundColorOne: '#FFFFFF',
+    backgroundColorTwo: '',
   })
   return (
     <cardDesignContext.Provider value={cardProperties}>

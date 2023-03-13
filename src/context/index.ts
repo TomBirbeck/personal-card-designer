@@ -12,6 +12,9 @@ const cardDesignContext = createContext<[{
     borderWidth: number,
     borderRadius: number,
     borderColor: string,
+    backgroundStyle: string,
+    backgroundColorOne: string,
+    backgroundColorTwo: string,
 }, 
     (properties: {
         layout: number,
@@ -25,6 +28,9 @@ const cardDesignContext = createContext<[{
         borderWidth: number,
         borderRadius: number,
         borderColor: string,
+        backgroundStyle: string,
+        backgroundColorOne: string,
+        backgroundColorTwo: string,
     }) => void ]>([{
         layout : 1,
         height: 150,
@@ -37,6 +43,9 @@ const cardDesignContext = createContext<[{
         borderWidth: 1,
         borderRadius: 0,
         borderColor: 'red',
+        backgroundStyle: 'solid',
+        backgroundColorOne: '#FFFFFF',
+        backgroundColorTwo: '',
 
 }, () => {}])
 export default cardDesignContext

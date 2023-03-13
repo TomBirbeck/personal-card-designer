@@ -3,7 +3,21 @@ import cardDesignContext from "../../context"
 
 const Card = () => {
     const props= useContext(cardDesignContext)
-    const {height, width, font, fontSize, textAlign, border, borderStyle, borderWidth, borderRadius, borderColor} = props[0]
+    const {
+        height,
+        width,
+        font,
+        fontSize,
+        textAlign,
+        border,
+        borderStyle,
+        borderWidth,
+        borderRadius,
+        borderColor,
+        backgroundStyle,
+        backgroundColorOne,
+        backgroundColorTwo,
+    } = props[0]
     const [borderType, setBorderType] = useState('')
 
     useEffect(() => {
@@ -25,9 +39,9 @@ const Card = () => {
             fontFamily: `${font}`,
             fontSize: `${fontSize}px`,
             textAlign: `left`,
-            backgroundColor: 'red',
             border: `${borderType}`,
-            borderRadius: `${borderRadius}rem`
+            borderRadius: `${borderRadius}rem`,
+            backgroundColor: `${backgroundColorOne}`
         }}
         >
             <h3>Card</h3>

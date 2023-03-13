@@ -1,14 +1,11 @@
 .App {
   height: 100vh;
   display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr 1fr 0.75fr;
+  grid-template-rows: 0.5fr 0.75fr 3fr 0.75fr;
   grid-template-areas:  
   "header header header header header"
   "left-menu top-menu top-menu top-menu right-menu"
-  "left-menu card-area card-area card-area right-menu"
-  "left-menu card-area card-area card-area right-menu"
-  "left-menu card-area card-area card-area right-menu"
-  "left-menu card-area card-area card-area right-menu"
-  "left-menu card-area card-area card-area right-menu"
   "left-menu card-area card-area card-area right-menu"
   "left-menu bottom-menu bottom-menu bottom-menu right-menu";
 }

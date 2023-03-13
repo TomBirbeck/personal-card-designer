@@ -20,6 +20,7 @@ const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
     setTest({...test, backgroundColorTwo: e.target.value})
     setCardProperties({...cardProperties, backgroundColorTwo: e.target.value})
     }
+
     return (
         <div className='top-menu'>
             <select
@@ -29,13 +30,13 @@ const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
             <option value={'solid'}>solid</option>
             <option value={'gradTop'}>Gradient top - bottom</option>
             <option value={'gradLeft'}>Gradient left - right</option>
-            <option value={'radial'}>Gradient radial</option>
+            {/* <option value={'radial'}>Gradient radial</option> */}
         </select>
         <label htmlFor='background one color picker'>background color 1
        <input type={'color'} onChange={handleBackgroundColorOne}/>
         </label>
         <label htmlFor='background two color picker' >background color 2
-       {test.backgroundStyle === 'solid' ? <input type={'color'} onChange={handleBackgroundColorTwo} disabled/>:
+       {cardProperties.backgroundStyle === 'solid' ? <input type={'color'} onChange={handleBackgroundColorTwo} disabled/>:
         <input type={'color'} onChange={handleBackgroundColorTwo}/>}
         </label>
         </div>

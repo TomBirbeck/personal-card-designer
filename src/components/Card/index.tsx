@@ -19,6 +19,18 @@ const Card = () => {
         backgroundColorTwo,
     } = props[0]
     const [borderType, setBorderType] = useState('')
+    const [styles, setStyles] = useState({
+        padding: '0.5rem',
+        height: `${height}px`,
+        width : `${width}px`,
+        fontFamily: `${font}`,
+        fontSize: `${fontSize}px`,
+        TextAlign: `${textAlign}`,
+        border: `${borderType}`,
+        borderRadius: `${borderRadius}rem`,
+        backgroundColor: `${backgroundColorOne}`,
+        backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,
+    })
 
     useEffect(() => {
         if (border) {
@@ -29,22 +41,50 @@ const Card = () => {
 
     }, [border, borderColor, borderStyle, borderWidth])
 
-    console.log({textAlign})
-    return (
-        <div className="card"
-        style={{
-            padding: '0.5rem',
+    useEffect(() => {
+        if (backgroundStyle === 'solid') {
+            setStyles({...styles,
             height: `${height}px`,
             width : `${width}px`,
             fontFamily: `${font}`,
             fontSize: `${fontSize}px`,
-            textAlign: `left`,
+            TextAlign: `${textAlign}`,
             border: `${borderType}`,
             borderRadius: `${borderRadius}rem`,
-            backgroundColor: `${backgroundColorOne}`
-        }}
+            backgroundColor: `${backgroundColorOne}`,
+            backgroundImage: `none`,
+            })
+        } else if (backgroundStyle === 'gradTop'){
+            setStyles({...styles,
+                height: `${height}px`,
+                width : `${width}px`,
+                fontFamily: `${font}`,
+                fontSize: `${fontSize}px`,
+                TextAlign: `${textAlign}`,
+                border: `${borderType}`,
+                borderRadius: `${borderRadius}rem`,
+                backgroundColor: `${backgroundColorOne}`,
+                backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,
+        })} else if (backgroundStyle === 'gradLeft') {
+            setStyles({...styles,
+                height: `${height}px`,
+                width : `${width}px`,
+                fontFamily: `${font}`,
+                fontSize: `${fontSize}px`,
+                TextAlign: `${textAlign}`,
+                border: `${borderType}`,
+                borderRadius: `${borderRadius}rem`,
+                backgroundColor: `${backgroundColorOne}`,
+                backgroundImage: `linear-gradient(to right,${backgroundColorOne}, ${backgroundColorTwo})`,
+        })}
+    }, [backgroundColorOne, height, width, font, fontSize, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle])
+
+    // console.log({textAlign, backgroundStyle})
+    return (
+        <div className="card"
+        style={styles}
         >
-            <h3>Card</h3>
+            <h3>Solid</h3> 
         </div>
     )
 }

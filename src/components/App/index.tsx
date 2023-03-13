@@ -20,7 +20,7 @@ function App() {
     borderStyle: 'solid',
     borderWidth: 1,
     borderRadius: 0,
-    borderColor: 'red',
+    borderColor: 'black',
   })
   return (
     <cardDesignContext.Provider value={cardProperties}>

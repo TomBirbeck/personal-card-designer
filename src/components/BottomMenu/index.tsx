@@ -9,7 +9,6 @@ const BottomMenu = () => {
     const [color, setColor] = useState("#aabbcc");
 
     const handleBorder = () => {
-        setChooseColor(!chooseColor)
         setCardProperties({...cardProperties, border: !cardProperties.border})
     }
 

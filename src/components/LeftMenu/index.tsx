@@ -31,7 +31,7 @@ const LeftMenu = () => {
         setCardProperties({...cardProperties, font: e.target.value})
     }
 
-    console.log({cardDesign, cardProperties});
+    // console.log({cardDesign, cardProperties});
 
     return (<div className="left-menu">
         <h2>left menu</h2>

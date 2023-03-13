@@ -15,7 +15,7 @@ const Card = () => {
 
     }, [border, borderColor, borderStyle, borderWidth])
 
-    console.log({borderRadius})
+    console.log({textAlign})
     return (
         <div className="card"
         style={{
@@ -24,7 +24,7 @@ const Card = () => {
             width : `${width}px`,
             fontFamily: `${font}`,
             fontSize: `${fontSize}px`,
-            // textAlign: `${textAlign}`,
+            textAlign: `left`,
             backgroundColor: 'red',
             border: `${borderType}`,
             borderRadius: `${borderRadius}rem`

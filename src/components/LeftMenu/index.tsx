@@ -31,12 +31,10 @@ const LeftMenu = () => {
         setCardProperties({...cardProperties, font: e.target.value})
     }
 
-    // console.log({cardDesign, cardProperties});
-
     return (<div className="left-menu">
         <h2>left menu</h2>
         <select
-        className='selections'
+        className='selections-left'
         onChange={handleLayout}
         >
             <option value={1}>Layout</option>
@@ -46,7 +44,7 @@ const LeftMenu = () => {
             <option value={4}>4</option>
             </select>
         <select
-        className='selections'
+        className='selections-left'
         onChange={handleCardSize}
         >
             <option value={200}>Size</option>
@@ -56,7 +54,7 @@ const LeftMenu = () => {
             <option value={500}>500px x 250px</option>
         </select>
         <select
-        className='selections'
+        className='selections-left'
         onChange={handleFont}
         >
             <option>Font</option>
@@ -65,7 +63,7 @@ const LeftMenu = () => {
             <option value={16}>font 3</option>
         </select>
         <select
-        className='selections'
+        className='selections-left'
         onChange={handleFontSize}
         >
             <option>Font Size</option>
@@ -76,7 +74,7 @@ const LeftMenu = () => {
             <option value={20}>20px</option>
         </select>
         <select
-        className='selections'
+        className='selections-left'
         onChange={handleTextAlign}
         >
             <option>Text Alignment</option>
@@ -84,6 +82,10 @@ const LeftMenu = () => {
             <option value={'center'}>Center</option>
             <option value={'right'}>Right</option>
         </select>
+
+        <input type='file' accept='image/*'/>
+        <button>Save</button>
+        <button>Download</button>
     </div>
     )
 }

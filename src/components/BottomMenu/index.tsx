@@ -8,6 +8,7 @@ const BottomMenu = () => {
     const [chooseColor, setChooseColor] = useState(true)
     const [color, setColor] = useState("#aabbcc");
 
+
     const handleBorder = () => {
         setCardProperties({...cardProperties, border: !cardProperties.border})
     }
@@ -36,7 +37,7 @@ const BottomMenu = () => {
                 <span className="slider round"></span>
                 </label>
             <select
-        className='selections'
+        className='selections-bottom'
         onChange={handleBorderStyle}
         >
             <option value={'solid'}>Border Style</option>
@@ -46,7 +47,7 @@ const BottomMenu = () => {
             <option value={'ridge'}>ridge</option>
         </select>
             <select
-        className='selections'
+        className='selections-bottom'
         onChange={handleBorderWidth}
         >
             <option value={1}>Border Width</option>
@@ -56,7 +57,7 @@ const BottomMenu = () => {
             <option value={4}>4px</option>
         </select>
             <select
-        className='selections'
+        className='selections-bottom'
         onChange={handleBorderRadius}
         >
             <option value={0}>Border Radius</option>

@@ -1,5 +1,4 @@
 import { createContext } from "react";
-import { CardContext } from "../types";
 
 const cardDesignContext = createContext<[{
     layout: number,

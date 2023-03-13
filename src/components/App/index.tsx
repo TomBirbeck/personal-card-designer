@@ -9,7 +9,14 @@ import './App.css';
 import cardDesignContext from '../../context';
 
 function App() {
-  const cardProperties = useState({})
+  const cardProperties = useState({
+    layout : 1,
+    height: 300,
+    width: 150,
+    font: 'sans-serif',
+    fontSize: 16,
+    textAlign: 'left' 
+  })
   return (
     <cardDesignContext.Provider value={cardProperties}>
     <div className="App">

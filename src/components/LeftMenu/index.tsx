@@ -3,7 +3,7 @@ import './LeftMenu.css'
 import cardDesignContext from '../../context';
 
 const LeftMenu = () => {
-    const [cardDesign, setCardDesign] = useState({layout: 1, size: 200, font: 'sans-serif', fontSize: 16, textAlign: 'left'})
+    const [cardDesign, setCardDesign] = useState({layout: 1, height: 100, width: 300, font: 'sans-serif', fontSize: 16, textAlign: 'left'})
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
 
     const handleLayout = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -12,8 +12,8 @@ const LeftMenu = () => {
     }
     
     const handleCardSize = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, size: Number(e.target.value)})
-        setCardProperties({...cardProperties, size: Number(e.target.value)})
+        setCardDesign({...cardDesign, width: Number(e.target.value), height: Number(e.target.value)/2})
+        setCardProperties({...cardDesign, width: Number(e.target.value), height: Number(e.target.value)/2})
     }
     
     const handleFont = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -23,7 +23,7 @@ const LeftMenu = () => {
     
     const handleFontSize = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardDesign({...cardDesign, fontSize: Number(e.target.value)})
-        setCardProperties({...cardProperties, size: Number(e.target.value)})
+        setCardProperties({...cardProperties, fontSize: Number(e.target.value)})
     }
     
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -50,10 +50,10 @@ const LeftMenu = () => {
         onChange={handleCardSize}
         >
             <option value={200}>Size</option>
-            <option value={200}>200px x 100px</option>
-            <option value={250}>250px x 125px</option>
             <option value={300}>300px x 150px</option>
+            <option value={350}>350px x 175px</option>
             <option value={400}>400px x 200px</option>
+            <option value={500}>500px x 250px</option>
         </select>
         <select
         className='selections'

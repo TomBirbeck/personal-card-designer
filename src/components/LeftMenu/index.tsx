@@ -13,7 +13,7 @@ const LeftMenu = () => {
     
     const handleCardSize = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardDesign({...cardDesign, width: Number(e.target.value), height: Number(e.target.value)/2})
-        setCardProperties({...cardDesign, width: Number(e.target.value), height: Number(e.target.value)/2})
+        setCardProperties({...cardProperties, width: Number(e.target.value), height: Number(e.target.value)/2})
     }
     
     const handleFont = (e: ChangeEvent<HTMLSelectElement>) => {

@@ -11,11 +11,16 @@ import cardDesignContext from '../../context';
 function App() {
   const cardProperties = useState({
     layout : 1,
-    height: 300,
-    width: 150,
+    height: 150,
+    width: 300,
     font: 'sans-serif',
     fontSize: 16,
-    textAlign: 'left' 
+    textAlign: 'left' ,
+    border: false,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderRadius: 0,
+    borderColor: 'red',
   })
   return (
     <cardDesignContext.Provider value={cardProperties}>

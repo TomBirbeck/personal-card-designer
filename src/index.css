@@ -1,3 +1,7 @@
+:root {
+  --primary-color: blue;
+}
+
 * {
   margin: 0;
   padding: 0;

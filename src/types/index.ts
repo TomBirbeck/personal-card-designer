@@ -7,6 +7,7 @@ export type CardContext = {
     height: number,
     width: number,
     font: string,
+    fontColor: string,
     fontSize: number,
     textAlign: string,
     border: boolean,
@@ -14,4 +15,7 @@ export type CardContext = {
     borderWidth: number,
     borderRadius: number,
     borderColor: string,
+    backgroundStyle: string,
+    backgroundColorOne: string,
+    backgroundColorTwo: string,
 }

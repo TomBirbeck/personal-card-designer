@@ -1,4 +1,8 @@
 .right-menu {
     grid-area: right-menu;
     background-color: blue;
+    padding: 0.5rem;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
 }

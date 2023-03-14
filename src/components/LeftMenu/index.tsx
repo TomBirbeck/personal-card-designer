@@ -20,6 +20,10 @@ const LeftMenu = () => {
         setCardDesign({...cardDesign, font: e.target.value})
         setCardProperties({...cardProperties, font: e.target.value})
     }
+
+    const handleFontColor = (e: ChangeEvent<HTMLInputElement>) => {
+        setCardProperties({...cardProperties, fontColor: e.target.value})
+    }
     
     const handleFontSize = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardDesign({...cardDesign, fontSize: Number(e.target.value)})
@@ -62,6 +66,9 @@ const LeftMenu = () => {
             <option value={14}>font 2</option>
             <option value={16}>font 3</option>
         </select>
+        <label htmlFor='font color'>Font Colour
+        <input type={'color'} onChange={handleFontColor}/>
+        </label>
         <select
         className='selections-left'
         onChange={handleFontSize}

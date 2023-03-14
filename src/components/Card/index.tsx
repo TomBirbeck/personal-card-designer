@@ -1,3 +1,4 @@
+import './Card.css'
 import { useContext, useEffect, useState} from "react"
 import cardDesignContext from "../../context"
 
@@ -7,6 +8,7 @@ const Card = () => {
         height,
         width,
         font,
+        fontColor,
         fontSize,
         textAlign,
         border,
@@ -25,6 +27,7 @@ const Card = () => {
         width : `${width}px`,
         fontFamily: `${font}`,
         fontSize: `${fontSize}px`,
+        color: `${fontColor}`,
         TextAlign: `${textAlign}`,
         border: `${borderType}`,
         borderRadius: `${borderRadius}rem`,
@@ -47,6 +50,7 @@ const Card = () => {
             height: `${height}px`,
             width : `${width}px`,
             fontFamily: `${font}`,
+            color: `${fontColor}`,
             fontSize: `${fontSize}px`,
             TextAlign: `${textAlign}`,
             border: `${borderType}`,
@@ -59,6 +63,7 @@ const Card = () => {
                 height: `${height}px`,
                 width : `${width}px`,
                 fontFamily: `${font}`,
+                color: `${fontColor}`,
                 fontSize: `${fontSize}px`,
                 TextAlign: `${textAlign}`,
                 border: `${borderType}`,
@@ -70,6 +75,7 @@ const Card = () => {
                 height: `${height}px`,
                 width : `${width}px`,
                 fontFamily: `${font}`,
+                color: `${fontColor}`,
                 fontSize: `${fontSize}px`,
                 TextAlign: `${textAlign}`,
                 border: `${borderType}`,
@@ -77,14 +83,16 @@ const Card = () => {
                 backgroundColor: `${backgroundColorOne}`,
                 backgroundImage: `linear-gradient(to right,${backgroundColorOne}, ${backgroundColorTwo})`,
         })}
-    }, [backgroundColorOne, height, width, font, fontSize, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle])
+    }, [backgroundColorOne, height, width, font, fontSize, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, styles])
 
     // console.log({textAlign, backgroundStyle})
     return (
         <div className="card"
         style={styles}
         >
-            <h3>Solid</h3> 
+            <h3 style={{gridArea: 'zone2'}}>Jimmy Jones</h3>
+            <p style={{gridArea: 'zone3'}}>tagline</p>
+            <img style={{gridArea: 'zone1'}} src="" alt="image"/> 
         </div>
     )
 }

@@ -30,7 +30,6 @@ const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
             <option value={'solid'}>solid</option>
             <option value={'gradTop'}>Gradient top - bottom</option>
             <option value={'gradLeft'}>Gradient left - right</option>
-            {/* <option value={'radial'}>Gradient radial</option> */}
         </select>
         <label htmlFor='background one color picker'>background color 1
        <input type={'color'} onChange={handleBackgroundColorOne}/>

@@ -1,9 +1,11 @@
-import '../RightMenu/RightMenu.css'
+import PreviewCard from '../PreviewCard'
+import './RightMenu.css'
 
 const RightMenu = () => {
     return (
         <div className='right-menu'>
-            <h2>right menu</h2>
+            <PreviewCard/>
+            {/* <h4>hey</h4> */}
         </div>
     )
     }

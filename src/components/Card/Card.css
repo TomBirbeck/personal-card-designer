@@ -1,6 +1,32 @@
 .card {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
     "zone1 zone2 zone2"
     "zone3 zone3 zone3"
+}
+
+/* layout 1 */
+
+.layout-one-image-container {
+    grid-area: zone1;
+    height: 100%;
+    max-height: 6rem;
+    overflow: none;
+}
+.layout-one-image {
+    height: 100%;
+}
+
+.layout-one-name {
+    grid-area: zone2;
+    align-self: center;
+    text-align: center;
+}
+
+.layout-one-tagline {
+    grid-area: zone3;
+    align-self: center;
+    text-align: center;
 }

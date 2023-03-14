@@ -1,10 +1,12 @@
 import './Card.css'
 import { useContext, useEffect, useState} from "react"
 import cardDesignContext from "../../context"
+import fox from '../../assets/fox.jpg'
 
 const Card = () => {
     const props= useContext(cardDesignContext)
     const {
+        layout,
         height,
         width,
         font,
@@ -22,6 +24,7 @@ const Card = () => {
     } = props[0]
     const [borderType, setBorderType] = useState('')
     const [styles, setStyles] = useState({
+        layout: 1,
         padding: '0.5rem',
         height: `${height}px`,
         width : `${width}px`,
@@ -87,12 +90,17 @@ const Card = () => {
 
     // console.log({textAlign, backgroundStyle})
     return (
-        <div className="card"
-        style={styles}
-        >
-            <h3 style={{gridArea: 'zone2'}}>Jimmy Jones</h3>
-            <p style={{gridArea: 'zone3'}}>tagline</p>
-            <img style={{gridArea: 'zone1'}} src="" alt="image"/> 
+        <div >
+            {layout === 1?
+            <div className="card"
+            style={styles}>
+            <div className='layout-one-image-container'>
+            <img className='layout-one-image' src={fox} alt="image"/> 
+            </div>
+            <h3 className='layout-one-name'>Jimmy Jones</h3>
+            <p className='layout-one-tagline'>The coolest fox in town</p>
+             </div>   
+            : null}
         </div>
     )
 }

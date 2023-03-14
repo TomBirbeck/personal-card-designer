@@ -52,10 +52,11 @@ const LeftMenu = () => {
         onChange={handleCardSize}
         >
             <option value={200}>Size</option>
-            <option value={300}>300px x 150px</option>
-            <option value={350}>350px x 175px</option>
-            <option value={400}>400px x 200px</option>
-            <option value={500}>500px x 250px</option>
+            <option value={300}>300 x 150</option>
+            <option value={330}>330 x 165</option>
+            <option value={370}>370 x 185</option>
+            <option value={400}>400 x 200</option>
+            <option value={450}>450 x 225</option>
         </select>
         <select
         className='selections-left'

@@ -108,7 +108,7 @@ const Card = () => {
             </div>
             <h3 className='layout-two-name'>Tom Tomato</h3>
             <p className='layout-two-tagline'>Really long message for the fans that we need to sort out</p>
-             </div>:
+             </div>: layout === 3 ?
              <div className="layout-three-card"
              style={styles}>
              <div className='layout-three-image-container'>
@@ -116,7 +116,15 @@ const Card = () => {
              </div>
              <h3 className='layout-three-name'>Steve Stereo</h3>
              <p className='layout-three-tagline'>Really long message for the fans that we need to sort out</p>
+              </div> :
+              <div className="layout-four-card"
+              style={styles}>
+              <div className='layout-four-image-container'>
+              <img className='layout-four-image' src={fox} alt="image"/> 
               </div>
+              <h3 className='layout-four-name'>Steve Stereo</h3>
+              <p className='layout-four-tagline'>Really long message for the fans that we need to sort out</p>
+               </div>
              }   
         </div>
     )

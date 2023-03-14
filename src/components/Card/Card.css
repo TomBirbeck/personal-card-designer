@@ -97,3 +97,37 @@
     grid-area: zone3;
     align-self: center;
 }
+
+/* layout 4 */
+
+.layout-four-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    column-gap: 0.5rem;
+    grid-template-areas:
+    "zone1 zone1 zone2"
+    "zone3 zone3 zone2";
+    text-align: center;
+}
+
+.layout-four-image-container {
+    grid-area: zone2;
+    height: 100%;
+    overflow: none;
+    max-height: 12rem;
+}
+.layout-four-image {
+    height: 100%;
+    place-content: center;
+}
+
+.layout-four-name {
+    grid-area: zone1;
+    align-self: center;
+}
+
+.layout-four-tagline {
+    grid-area: zone3;
+    align-self: center;
+}

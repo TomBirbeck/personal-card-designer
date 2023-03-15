@@ -1,11 +1,26 @@
 .left-menu {
     grid-area: left-menu;
-    background-color: blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: var(--primary-blue);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    padding: 2rem;
+    color: white;
 }
 
 .selections-left {
-    width: 50%;
+        height: 40%;
+        width: 80%;
+        border-radius: 0.25rem;
+}
+
+.font-color-picker {
+    display: block;
+    width: 80%;
+    border-radius: 0.25rem;
+}
+
+.buttons {
+    width: 70%;
+    height: 40%;
 }

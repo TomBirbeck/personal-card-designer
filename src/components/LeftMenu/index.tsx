@@ -36,7 +36,6 @@ const LeftMenu = () => {
     }
 
     return (<div className="left-menu">
-        <h2>left menu</h2>
         <select
         className='selections-left'
         onChange={handleLayout}
@@ -69,8 +68,8 @@ const LeftMenu = () => {
             <option value={'Roboto Condensed'}>Roboto Condensed</option>
             <option value={'Tangerine'}>Tangerine</option>
         </select>
-        <label htmlFor='font color'>Font Colour
-        <input type={'color'} onChange={handleFontColor}/>
+        <label className='left-menu-labels' htmlFor='font color'>Font Colour
+        <input className='font-color-picker' type={'color'} onChange={handleFontColor}/>
         </label>
         <select
         className='selections-left'
@@ -86,19 +85,12 @@ const LeftMenu = () => {
             <option value={28}>28px</option>
             <option value={32}>32px</option>
         </select>
-        {/* <select
-        className='selections-left'
-        onChange={handleTextAlign}
-        >
-            <option>Text Alignment</option>
-            <option value={'left'}>Left</option>
-            <option value={'center'}>Center</option>
-            <option value={'right'}>Right</option>
-        </select> */}
-
-        <input type='file' accept='image/*'/>
-        <button>Save</button>
-        <button>Download</button>
+        {/* <label>
+        Upload your photo
+        <input style={{width: '5rem'}} type='file' accept='image/*'/>
+        </label> */}
+        <button className='buttons'>Save</button>
+        <button className='buttons'>Download</button>
     </div>
     )
 }

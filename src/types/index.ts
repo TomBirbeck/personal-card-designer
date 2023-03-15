@@ -19,3 +19,13 @@ export type CardContext = {
     backgroundColorOne: string,
     backgroundColorTwo: string,
 }
+
+export type PreviewCardContext = {
+    backgroundStyle: string,
+    backgroundColorOne: string,
+    backgroundColorTwo: string,
+    borderStyle?: string,
+    borderRadius?: number,
+    borderWidth?: number,
+    borderColor?: string,
+}

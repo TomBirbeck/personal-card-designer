@@ -2,4 +2,7 @@
     grid-area: right-menu;
     background-color: var(--primary-blue);
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

@@ -1,4 +1,7 @@
 .header{
     grid-area: header;
-    background-color: aquamarine;
+    background-color: var(--primary-blue);
+    display: grid;
+    place-content: center;
+    color: white;
 }

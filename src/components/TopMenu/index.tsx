@@ -27,16 +27,17 @@ const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
         className='selections-top'
         onChange={handleBackgroundStyle}
         >
+            <option value={''}>Background Style</option>
             <option value={'solid'}>solid</option>
             <option value={'gradTop'}>Gradient top - bottom</option>
             <option value={'gradLeft'}>Gradient left - right</option>
         </select>
-        <label htmlFor='background one color picker'>background color 1
-       <input type={'color'} onChange={handleBackgroundColorOne}/>
+        <label className='top-menu-label' htmlFor='background one color picker'>Background Colour 1
+       <input className='top-color-picker' type={'color'} onChange={handleBackgroundColorOne}/>
         </label>
-        <label htmlFor='background two color picker' >background color 2
-       {cardProperties.backgroundStyle === 'solid' ? <input type={'color'} onChange={handleBackgroundColorTwo} disabled/>:
-        <input type={'color'} onChange={handleBackgroundColorTwo}/>}
+        <label className='top-menu-label' htmlFor='background two color picker' >Background Colour 2
+       {cardProperties.backgroundStyle === 'solid' ? <input className='top-color-picker' type={'color'} onChange={handleBackgroundColorTwo} disabled/>:
+        <input className='top-color-picker' type={'color'} onChange={handleBackgroundColorTwo}/>}
         </label>
         </div>
     )

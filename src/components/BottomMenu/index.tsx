@@ -62,7 +62,9 @@ const BottomMenu = () => {
             <option value={1.5}>24px</option>
             <option value={2}>32px</option>
         </select>
-        <input type={'color'} onChange={handleBorderColor}/>
+         <label className='bottom-menu-label' htmlFor='border color picker'>Border Colour
+        <input className='bottom-color-picker' type={'color'} onChange={handleBorderColor}/>
+        </label>
         </div>
     )
 }

@@ -1,21 +1,30 @@
 .bottom-menu {
     grid-area: bottom-menu;
-    background-color: greenyellow;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    /* overflow-y: visible; */
+    place-items: center;
+    background-color: var(--primary-blue);
+    color: white;
+  
 }
 
 .selections-bottom {
-    height: 3rem;
-} 
+  height: 30%;
+  border-radius: 0.25rem;
+}
+
+.bottom-color-picker {
+  display: block;
+  width: 100%;
+  border-radius: 0.25rem;
+}
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 3.5rem;
+    height: 2rem;
   }
   
   /* Hide default HTML checkbox */
@@ -38,14 +47,14 @@
     transition: .4s;
   }
   
-  .slider:before {
+  .slider::before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 1.5rem;
+    width: 1.5rem;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: black;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -66,9 +75,9 @@
   
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border-radius: 2rem;
   }
   
-  .slider.round:before {
+  .slider.round::before {
     border-radius: 50%;
   }

@@ -63,9 +63,11 @@ const LeftMenu = () => {
         onChange={handleFont}
         >
             <option>Font</option>
-            <option value={12}>font 1</option>
-            <option value={14}>font 2</option>
-            <option value={16}>font 3</option>
+            <option value={'Bona Nova'}>Bona Nova</option>
+            <option value={'Charm'}>Charm</option>
+            <option value={'Libre Baskerville'}>Libre Baskerville</option>
+            <option value={'Roboto Condensed'}>Roboto Condensed</option>
+            <option value={'Tangerine'}>Tangerine</option>
         </select>
         <label htmlFor='font color'>Font Colour
         <input type={'color'} onChange={handleFontColor}/>
@@ -80,8 +82,11 @@ const LeftMenu = () => {
             <option value={16}>16px</option>
             <option value={18}>18px</option>
             <option value={20}>20px</option>
+            <option value={24}>24px</option>
+            <option value={28}>28px</option>
+            <option value={32}>32px</option>
         </select>
-        <select
+        {/* <select
         className='selections-left'
         onChange={handleTextAlign}
         >
@@ -89,7 +94,7 @@ const LeftMenu = () => {
             <option value={'left'}>Left</option>
             <option value={'center'}>Center</option>
             <option value={'right'}>Right</option>
-        </select>
+        </select> */}
 
         <input type='file' accept='image/*'/>
         <button>Save</button>

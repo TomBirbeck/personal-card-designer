@@ -9,6 +9,7 @@ const person = {
 const PreviewCard = () => {
     return (
         <div className="preview-card">
+            <h1 style={{fontFamily: 'Bona Nova'}}>Test</h1>
             <h4>
             {person.name}
             </h4>

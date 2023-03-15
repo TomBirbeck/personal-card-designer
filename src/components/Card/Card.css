@@ -8,13 +8,13 @@
     "zone1 zone2 zone2"
     "zone3 zone3 zone3";
     text-align: center;
+    overflow:hidden;
 }
 
 .layout-one-image-container {
     grid-area: zone1;
     height: 100%;
     max-height: 6rem;
-    overflow: none;
 }
 .layout-one-image {
     height: 100%;
@@ -28,6 +28,7 @@
 .layout-one-tagline {
     grid-area: zone3;
     align-self: center;
+    overflow: none;
 }
 
 /* layout 2 */
@@ -41,6 +42,7 @@
     "zone1 zone2 zone2"
     "zone1 zone3 zone3";
     text-align: center;
+    overflow:hidden;
 }
 
 .layout-two-image-container {
@@ -76,6 +78,7 @@
     "zone1 zone1 zone2"
     "zone3 zone3 zone3";
     text-align: center;
+    overflow:hidden;
 }
 
 .layout-three-image-container {
@@ -109,6 +112,7 @@
     "zone1 zone1 zone2"
     "zone3 zone3 zone2";
     text-align: center;
+    overflow:hidden;
 }
 
 .layout-four-image-container {

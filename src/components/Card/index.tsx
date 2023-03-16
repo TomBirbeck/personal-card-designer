@@ -12,6 +12,7 @@ const Card = () => {
         font,
         fontColor,
         fontSize,
+        fontWeight,
         textAlign,
         border,
         borderStyle,
@@ -30,6 +31,7 @@ const Card = () => {
         width : `${width}px`,
         fontFamily: `${font}`,
         fontSize: `${fontSize}px`,
+        fontWeight: `${fontWeight}`,
         color: `${fontColor}`,
         TextAlign: `${textAlign}`,
         border: `${borderType}`,
@@ -53,6 +55,7 @@ const Card = () => {
             height: `${height}px`,
             width : `${width}px`,
             fontFamily: `${font}`,
+            fontWeight: `${fontWeight}`,
             color: `${fontColor}`,
             fontSize: `${fontSize}px`,
             TextAlign: `${textAlign}`,
@@ -66,6 +69,7 @@ const Card = () => {
                 height: `${height}px`,
                 width : `${width}px`,
                 fontFamily: `${font}`,
+                fontWeight: `${fontWeight}`,
                 color: `${fontColor}`,
                 fontSize: `${fontSize}px`,
                 TextAlign: `${textAlign}`,
@@ -78,6 +82,7 @@ const Card = () => {
                 height: `${height}px`,
                 width : `${width}px`,
                 fontFamily: `${font}`,
+                fontWeight: `${fontWeight}`,
                 color: `${fontColor}`,
                 fontSize: `${fontSize}px`,
                 TextAlign: `${textAlign}`,
@@ -86,7 +91,7 @@ const Card = () => {
                 backgroundColor: `${backgroundColorOne}`,
                 backgroundImage: `linear-gradient(to right,${backgroundColorOne}, ${backgroundColorTwo})`,
         })}
-    }, [backgroundColorOne, height, width, font, fontSize, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor])
+    }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor])
 
     // console.log({textAlign, backgroundStyle})
     return (

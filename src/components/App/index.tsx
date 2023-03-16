@@ -16,6 +16,7 @@ function App() {
     font: 'sans-serif',
     fontColor: 'black',
     fontSize: 16,
+    fontWeight: 400,
     textAlign: 'left' ,
     border: false,
     borderStyle: 'solid',

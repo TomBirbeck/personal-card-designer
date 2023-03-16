@@ -9,6 +9,7 @@ export type CardContext = {
     font: string,
     fontColor: string,
     fontSize: number,
+    fontWeight: number,
     textAlign: string,
     border: boolean,
     borderStyle: string,
@@ -32,4 +33,5 @@ export type PreviewCardContext = {
     font?: string,
     fontSize?: number,
     fontColor?: string,
+    fontWeight?: number,
 }

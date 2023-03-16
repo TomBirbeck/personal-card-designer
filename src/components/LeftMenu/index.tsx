@@ -29,6 +29,10 @@ const LeftMenu = () => {
         setCardDesign({...cardDesign, fontSize: Number(e.target.value)})
         setCardProperties({...cardProperties, fontSize: Number(e.target.value)})
     }
+
+    const handleFontWeight = (e: ChangeEvent<HTMLSelectElement>) => {
+        setCardProperties({...cardProperties, fontWeight: Number(e.target.value)})
+    }
     
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardDesign({...cardDesign, textAlign: e.target.value})
@@ -40,7 +44,7 @@ const LeftMenu = () => {
         className='selections-left'
         onChange={handleLayout}
         >
-            <option value={1}>Layout</option>
+            <option>Layout</option>
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
@@ -50,7 +54,7 @@ const LeftMenu = () => {
         className='selections-left'
         onChange={handleCardSize}
         >
-            <option value={200}>Size</option>
+            <option>Size</option>
             <option value={300}>300 x 150</option>
             <option value={330}>330 x 165</option>
             <option value={370}>370 x 185</option>
@@ -84,6 +88,14 @@ const LeftMenu = () => {
             <option value={24}>24px</option>
             <option value={28}>28px</option>
             <option value={32}>32px</option>
+        </select>
+        <select
+        className='selections-left'
+        onChange={handleFontWeight}
+        >
+            <option>Font Weight</option>
+            <option value={400}>Normal</option>
+            <option value={700}>Bold</option>
         </select>
         {/* <label>
         Upload your photo

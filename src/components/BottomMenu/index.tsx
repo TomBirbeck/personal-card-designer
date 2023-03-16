@@ -36,11 +36,11 @@ const BottomMenu = () => {
         className='selections-bottom'
         onChange={handleBorderStyle}
         >
-            <option value={'solid'}>Border Style</option>
-            <option value={'solid'}>solid</option>
-            <option value={'dashed'}>dashed</option>
-            <option value={'dotted'}>dotted</option>
-            <option value={'ridge'}>ridge</option>
+            <option value={''}>Border Style</option>
+            <option value={'solid'}>Solid</option>
+            <option value={'dashed'}>Dashed</option>
+            <option value={'dotted'}>Dotted</option>
+            <option value={'ridge'}>Ridge</option>
         </select>
             <select
         className='selections-bottom'

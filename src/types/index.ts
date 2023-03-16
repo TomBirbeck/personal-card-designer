@@ -24,10 +24,12 @@ export type PreviewCardContext = {
     backgroundStyle: string,
     backgroundColorOne: string,
     backgroundColorTwo: string,
-    borderStyle?: string | undefined,
+    border: boolean,
+    borderStyle?: string,
     borderRadius?: number,
     borderWidth?: number,
     borderColor?: string,
     font?: string,
     fontSize?: number,
+    fontColor?: string,
 }

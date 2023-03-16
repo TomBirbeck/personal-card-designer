@@ -5,19 +5,21 @@ import { useContext } from 'react'
 import cardDesignContext from '../../context'
 
 
-const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, borderStyle, borderRadius, borderWidth, borderColor, font, fontSize} : PreviewCardContext) => {
+const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, border, borderStyle, borderRadius, borderWidth, borderColor, font, fontSize, fontColor} : PreviewCardContext) => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
     
     const handleCardClick = () => {
         setCardProperties({...cardProperties, backgroundStyle: backgroundStyle, 
             backgroundColorOne: backgroundColorOne, 
             backgroundColorTwo: backgroundColorTwo,
+            border: border,
             borderStyle: borderStyle || 'none',
             borderRadius: borderRadius || 0,
             borderWidth: borderWidth || 0,
             borderColor: borderColor || '',
             font: font || 'sans-serif',
             fontSize: fontSize || 16,
+            fontColor: fontColor || '#000000'
         })
     }
 
@@ -29,7 +31,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
         >
         {backgroundStyle === 'solid' ?
         <div className="preview-card"
-        style={{backgroundColor: `${backgroundColorOne}`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`}}
+        style={{backgroundColor: `${backgroundColorOne}`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, fontFamily: `${font}`, color: `${fontColor}`}}
         >
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>

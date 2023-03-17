@@ -17,6 +17,7 @@ const cardDesignContext = createContext<[{
     backgroundStyle: string,
     backgroundColorOne: string,
     backgroundColorTwo: string,
+    imageUrl: string,
 }, 
     (properties: {
         layout: number,
@@ -35,6 +36,7 @@ const cardDesignContext = createContext<[{
         backgroundStyle: string,
         backgroundColorOne: string,
         backgroundColorTwo: string,
+        imageUrl: string,
     }) => void ]>([{
         layout : 1,
         height: 150,
@@ -52,6 +54,7 @@ const cardDesignContext = createContext<[{
         backgroundStyle: 'solid',
         backgroundColorOne: '#FFFFFF',
         backgroundColorTwo: '',
-
+        imageUrl: '',
+        
 }, () => {}])
 export default cardDesignContext

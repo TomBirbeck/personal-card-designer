@@ -21,12 +21,12 @@ const CardContainer = () => {
         const element = cardRef.current;
         if (element){
             const canvas = await html2canvas(element, {backgroundColor: null});
-            const data = canvas.toDataURL('image/jpg');
+            const data = canvas.toDataURL('image/png');
             const link = document.createElement('a');
             
             if (typeof link.download === 'string') {
                 link.href = data;
-                link.download = 'image.jpg';
+                link.download = 'image.png';
                 
                 document.body.appendChild(link);
                 link.click();

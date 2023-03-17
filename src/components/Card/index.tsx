@@ -24,6 +24,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
         backgroundStyle,
         backgroundColorOne,
         backgroundColorTwo,
+        imageUrl
     } = props[0]
     const [borderType, setBorderType] = useState('')
     const [styles, setStyles] = useState({
@@ -40,6 +41,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
         borderRadius: `${borderRadius}rem`,
         backgroundColor: `${backgroundColorOne}`,
         backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,
+        imageUrl: `${imageUrl}`
     })
 
     useEffect(() => {
@@ -65,11 +67,12 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             borderRadius: `${borderRadius}rem`,
             backgroundColor: `${backgroundColorOne}`,
             backgroundImage: `none`,
-            })
-        } else if (backgroundStyle === 'gradTop'){
-            setStyles({...styles,
-                height: `${height}px`,
-                width : `${width}px`,
+            imageUrl: `${imageUrl}`
+        })
+    } else if (backgroundStyle === 'gradTop'){
+        setStyles({...styles,
+            height: `${height}px`,
+            width : `${width}px`,
                 fontFamily: `${font}`,
                 fontWeight: `${fontWeight}`,
                 color: `${fontColor}`,
@@ -79,9 +82,10 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
                 borderRadius: `${borderRadius}rem`,
                 backgroundColor: `${backgroundColorOne}`,
                 backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,
-        })} else if (backgroundStyle === 'gradLeft') {
-            setStyles({...styles,
-                height: `${height}px`,
+                imageUrl: `${imageUrl}`
+            })} else if (backgroundStyle === 'gradLeft') {
+                setStyles({...styles,
+                    height: `${height}px`,
                 width : `${width}px`,
                 fontFamily: `${font}`,
                 fontWeight: `${fontWeight}`,
@@ -92,8 +96,9 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
                 borderRadius: `${borderRadius}rem`,
                 backgroundColor: `${backgroundColorOne}`,
                 backgroundImage: `linear-gradient(to right,${backgroundColorOne}, ${backgroundColorTwo})`,
-        })}
-    }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor])
+                imageUrl: `${imageUrl}`
+            })}
+    }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, imageUrl])
 
     return (
         <div ref={cardRef}>
@@ -102,7 +107,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             style={styles}
             >
             <div className='layout-one-image-container'>
-            <img className='layout-one-image' src={fox} alt=""/> 
+            <img className='layout-one-image' src={imageUrl} alt=""/> 
             </div>
             <h3 className='layout-one-name'>{name}</h3>
             <p className='layout-one-tagline'>{tagline}</p>

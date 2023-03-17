@@ -2,10 +2,11 @@ import { ChangeEvent, useState, useContext } from 'react'
 import './LeftMenu.css'
 import cardDesignContext from '../../context';
 import { CardContext } from '../../types';
+import fox from '../../assets/fox.jpg'
 
 const LeftMenu = () => {
-
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
+    // const [image, setImage] = useState()
 
     const handleLayout = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, layout: Number(e.target.value)})
@@ -33,6 +34,15 @@ const LeftMenu = () => {
     
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, font: e.target.value})
+    }
+
+    // const handleImage = (e: any) => {
+    //     setImage(e.target.value)
+    //     setCardProperties({...cardProperties, imageUrl: e.target.value})
+    // }
+
+    const handlePicture = (e: ChangeEvent<HTMLSelectElement>) => {
+        setCardProperties({...cardProperties, imageUrl: e.target.value})
     }
 
     const handleSave = (cardDesign : CardContext) => {
@@ -118,12 +128,20 @@ const LeftMenu = () => {
             <option value={400}>Normal</option>
             <option value={700}>Bold</option>
         </select>
+        <select
+        className='selections-left'
+        onChange={handlePicture}
+        >
+            <option>Choose Avatar</option>
+            <option value={fox}>Fox</option>
+            <option value={'badger'}>Badger</option>
+        </select>
         {/* <label>
         Upload your photo
-        <input style={{width: '5rem'}} type='file' accept='image/*'/>
+        <input style={{width: '5rem'}} type='file' accept='image/*' onChange={handleImage}/>
         </label> */}
         <button className='buttons' onClick={()=> {handleSave(cardProperties)}}>Save</button>
-        <button className='buttons'>Download</button>
+        {/* <button className='buttons'>Download</button> */}
     </div>
     )
 }

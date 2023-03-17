@@ -1,6 +1,7 @@
 import { ChangeEvent, useState, useContext } from 'react'
 import './LeftMenu.css'
 import cardDesignContext from '../../context';
+import { CardContext } from '../../types';
 
 const LeftMenu = () => {
 
@@ -33,6 +34,31 @@ const LeftMenu = () => {
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, font: e.target.value})
     }
+
+    const handleSave = (cardDesign : CardContext) => {
+        const cardStyles = {
+            backgroundStyle: cardDesign.backgroundStyle,
+            backgroundColorOne: cardDesign.backgroundColorOne,
+            backgroundColorTwo: cardDesign.backgroundColorTwo,
+            border: cardDesign.border,
+            borderStyle: cardDesign.borderStyle,
+            borderWidth: cardDesign.borderWidth,
+            borderColor: cardDesign.borderColor,
+            font: cardDesign.font,
+            fontColor: cardDesign.fontColor,
+            fontWeight: cardDesign.fontWeight,
+            fontSize: cardDesign.fontSize,
+        }
+        localStorage.setItem('cardStyles', JSON.stringify(cardStyles))
+
+    }
+
+    // const stored = localStorage.getItem('cardStyles')
+
+    // if (stored) {
+
+    //     console.log(JSON.parse(stored))
+    // }
 
     return (<div className="left-menu">
         <select
@@ -96,7 +122,7 @@ const LeftMenu = () => {
         Upload your photo
         <input style={{width: '5rem'}} type='file' accept='image/*'/>
         </label> */}
-        <button className='buttons'>Save</button>
+        <button className='buttons' onClick={()=> {handleSave(cardProperties)}}>Save</button>
         <button className='buttons'>Download</button>
     </div>
     )

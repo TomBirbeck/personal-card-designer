@@ -20,9 +20,8 @@ const CardContainer = () => {
     const handleDownloadImage = async () => {
         const element = cardRef.current;
         if (element){
-            const canvas = await html2canvas(element);
+            const canvas = await html2canvas(element, {backgroundColor: null});
             const data = canvas.toDataURL('image/jpg');
-            
             const link = document.createElement('a');
             
             if (typeof link.download === 'string') {

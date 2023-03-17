@@ -5,7 +5,7 @@ import fox from '../../assets/fox.jpg'
 import { CardIProps } from '../../types'
 
 
-const Card = ({name, tagline}: CardIProps) => {
+const Card = ({name, tagline, cardRef}: CardIProps) => {
     const props= useContext(cardDesignContext)
     const {
         layout,
@@ -96,10 +96,11 @@ const Card = ({name, tagline}: CardIProps) => {
     }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor])
 
     return (
-        <div >
+        <div ref={cardRef}>
             {layout === 1?
             <div className="layout-one-card"
-            style={styles}>
+            style={styles}
+            >
             <div className='layout-one-image-container'>
             <img className='layout-one-image' src={fox} alt=""/> 
             </div>

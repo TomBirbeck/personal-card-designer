@@ -39,4 +39,5 @@ export type PreviewCardContext = {
 export interface CardIProps {
     name: string,
     tagline: string,
+    cardRef: React.MutableRefObject<null>
 }

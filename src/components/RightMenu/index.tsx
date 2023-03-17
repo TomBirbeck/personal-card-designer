@@ -13,6 +13,7 @@ const people = [{
     font: 'Bona Nova',
     fontSize: 16,
     fontColor: '#a52a2a',
+    fontWeight: 700,
 },
 {
     backgroundStyle: 'gradTop',
@@ -67,6 +68,7 @@ const RightMenu = () => {
                 font={person.font}
                 fontSize={person.fontSize}
                 fontColor={person.fontColor}
+                fontWeight={person.fontWeight}
                 />
             )
             })}

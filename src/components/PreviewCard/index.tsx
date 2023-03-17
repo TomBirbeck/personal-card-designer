@@ -5,7 +5,7 @@ import { useContext } from 'react'
 import cardDesignContext from '../../context'
 
 
-const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, border, borderStyle, borderRadius, borderWidth, borderColor, font, fontSize, fontColor} : PreviewCardContext) => {
+const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, border, borderStyle, borderRadius, borderWidth, borderColor, font, fontSize, fontColor, fontWeight} : PreviewCardContext) => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
     
     const handleCardClick = () => {
@@ -19,11 +19,10 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             borderColor: borderColor || '',
             font: font || 'sans-serif',
             fontSize: fontSize || 16,
-            fontColor: fontColor || '#000000'
+            fontColor: fontColor || '#000000',
+            fontWeight: fontWeight || 400
         })
     }
-
-    console.log(cardProperties)
 
     return (
         <div className='preview-card-container'
@@ -31,7 +30,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
         >
         {backgroundStyle === 'solid' ?
         <div className="preview-card"
-        style={{backgroundColor: `${backgroundColorOne}`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, fontFamily: `${font}`, color: `${fontColor}`}}
+        style={{backgroundColor: `${backgroundColorOne}`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, fontFamily: `${font}`, color: `${fontColor}`, fontWeight: `${fontWeight}`}}
         >
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>
@@ -40,7 +39,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             </div>
         </div>: backgroundStyle === 'gradTop' ?
         <div className="preview-card"
-        style={{backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,border: `${borderStyle}`, borderRadius: `${borderRadius}rem`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, fontFamily: `${font}`}}
+        style={{backgroundImage: `linear-gradient(${backgroundColorOne}, ${backgroundColorTwo})`,border: `${borderStyle}`, borderRadius: `${borderRadius}rem`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`,color: `${fontColor}`, fontFamily: `${font}`, fontWeight: `${fontWeight}`}}
         >
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>
@@ -49,7 +48,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             </div>
         </div>: backgroundStyle === 'gradLeft' ?
         <div className="preview-card"
-        style={{backgroundImage: `linear-gradient(to right, ${backgroundColorOne}, ${backgroundColorTwo})`, borderRadius: `${borderRadius}rem`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, fontFamily: `${font}`, fontSize: `${fontSize}px`}}
+        style={{backgroundImage: `linear-gradient(to right, ${backgroundColorOne}, ${backgroundColorTwo})`, borderRadius: `${borderRadius}rem`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, color: `${fontColor}` ,fontFamily: `${font}`, fontWeight: `${fontWeight}`}}
         >
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>

@@ -3,21 +3,18 @@ import './LeftMenu.css'
 import cardDesignContext from '../../context';
 
 const LeftMenu = () => {
-    const [cardDesign, setCardDesign] = useState({layout: 1, height: 100, width: 300, font: 'sans-serif', fontSize: 16, textAlign: 'left'})
+
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
 
     const handleLayout = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, layout: Number(e.target.value)})
         setCardProperties({...cardProperties, layout: Number(e.target.value)})
     }
     
     const handleCardSize = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, width: Number(e.target.value), height: Number(e.target.value)/2})
         setCardProperties({...cardProperties, width: Number(e.target.value), height: Number(e.target.value)/2})
     }
     
     const handleFont = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, font: e.target.value})
         setCardProperties({...cardProperties, font: e.target.value})
     }
 
@@ -26,7 +23,6 @@ const LeftMenu = () => {
     }
     
     const handleFontSize = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, fontSize: Number(e.target.value)})
         setCardProperties({...cardProperties, fontSize: Number(e.target.value)})
     }
 
@@ -35,7 +31,6 @@ const LeftMenu = () => {
     }
     
     const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardDesign({...cardDesign, textAlign: e.target.value})
         setCardProperties({...cardProperties, font: e.target.value})
     }
 

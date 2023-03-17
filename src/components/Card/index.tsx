@@ -95,7 +95,6 @@ const Card = ({name, tagline}: CardIProps) => {
         })}
     }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor])
 
-    // console.log({textAlign, backgroundStyle})
     return (
         <div >
             {layout === 1?

@@ -2,8 +2,10 @@ import './Card.css'
 import { useContext, useEffect, useState} from "react"
 import cardDesignContext from "../../context"
 import fox from '../../assets/fox.jpg'
+import { CardIProps } from '../../types'
 
-const Card = () => {
+
+const Card = ({name, tagline}: CardIProps) => {
     const props= useContext(cardDesignContext)
     const {
         layout,
@@ -102,8 +104,8 @@ const Card = () => {
             <div className='layout-one-image-container'>
             <img className='layout-one-image' src={fox} alt=""/> 
             </div>
-            <h3 className='layout-one-name'>Jimmy Jones</h3>
-            <p className='layout-one-tagline'>The coolest fox in town</p>
+            <h3 className='layout-one-name'>{name}</h3>
+            <p className='layout-one-tagline'>{tagline}</p>
              </div>   
             : layout === 2 ?
             <div className="layout-two-card"
@@ -111,24 +113,24 @@ const Card = () => {
             <div className='layout-two-image-container'>
             <img className='layout-two-image' src={fox} alt=""/> 
             </div>
-            <h3 className='layout-two-name'>Tom Tomato</h3>
-            <p className='layout-two-tagline'>Really long message for the fans that we need to sort out</p>
+            <h3 className='layout-two-name'>{name}</h3>
+            <p className='layout-two-tagline'>{tagline}</p>
              </div>: layout === 3 ?
              <div className="layout-three-card"
              style={styles}>
              <div className='layout-three-image-container'>
              <img className='layout-three-image' src={fox} alt=""/> 
              </div>
-             <h3 className='layout-three-name'>Steve Stereo</h3>
-             <p className='layout-three-tagline'>Really long message for the fans that we need to sort out</p>
+             <h3 className='layout-three-name'>{name}</h3>
+             <p className='layout-three-tagline'>{tagline}</p>
               </div> :
               <div className="layout-four-card"
               style={styles}>
               <div className='layout-four-image-container'>
               <img className='layout-four-image' src={fox} alt=""/> 
               </div>
-              <h3 className='layout-four-name'>Steve Stereo</h3>
-              <p className='layout-four-tagline'>Really long message for the fans that we need to sort out</p>
+              <h3 className='layout-four-name'>{name}</h3>
+              <p className='layout-four-tagline'>{tagline}</p>
                </div>
              }   
         </div>

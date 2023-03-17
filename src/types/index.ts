@@ -35,3 +35,8 @@ export type PreviewCardContext = {
     fontColor?: string,
     fontWeight?: number,
 }
+
+export interface CardIProps {
+    name: string,
+    tagline: string,
+}

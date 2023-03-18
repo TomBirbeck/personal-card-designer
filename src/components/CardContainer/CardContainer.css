@@ -18,3 +18,14 @@
 .card-labels {
     color: white;
 }
+
+.inputs-and-buttons {
+    display: flex;
+    gap:1rem;
+}
+
+.buttons {
+    align-self: flex-end;
+    min-width: 5rem;
+    height: 50%;
+}

@@ -16,6 +16,7 @@
     height: 100%;
     max-height: 6rem;
 }
+
 .layout-one-image {
     height: 100%;
 }
@@ -50,7 +51,8 @@
     grid-area: zone1;
     height: 100%;
     overflow: none;
-    max-height: 12rem;
+    max-height: 10rem;
+    max-width: 10rem;
 }
 .layout-two-image {
     height: 100%;
@@ -124,8 +126,10 @@
     grid-area: zone2;
     height: 100%;
     overflow: none;
-    max-height: 12rem;
+    max-height: 10rem;
+    max-width: 10rem;
 }
+
 .layout-four-image {
     height: 100%;
     place-content: center;

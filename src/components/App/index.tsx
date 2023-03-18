@@ -7,7 +7,7 @@ import RightMenu from '../RightMenu';
 import TopMenu from '../TopMenu';
 import './App.css';
 import cardDesignContext from '../../context';
-import fox from '../../assets/fox.jpg'
+import pig from '../../assets/pig.png'
 
 function App() {
   const cardProperties = useState({
@@ -27,7 +27,7 @@ function App() {
     backgroundStyle: 'solid',
     backgroundColorOne: '#FFFFFF',
     backgroundColorTwo: '',
-    imageUrl: fox
+    imageUrl: pig
   })
   return (
     <cardDesignContext.Provider value={cardProperties}>

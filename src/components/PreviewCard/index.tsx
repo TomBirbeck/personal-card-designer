@@ -1,5 +1,5 @@
 import './PreviewCard.css'
-import fox from '../../../src/assets/fox.jpg'
+import cat from '../../../src/assets/cat.png'
 import { PreviewCardContext } from '../../types'
 import { useContext } from 'react'
 import cardDesignContext from '../../context'
@@ -35,7 +35,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>
             <div className='preview-card-image-container'>
-            <img className='preview-card-image' src={fox} alt='profile pic'/>
+            <img className='preview-card-image' src={cat} alt='profile pic'/>
             </div>
         </div>: backgroundStyle === 'gradTop' ?
         <div className="preview-card"
@@ -44,7 +44,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>
             <div className='preview-card-image-container'>
-            <img className='preview-card-image' src={fox} alt='profile pic'/>
+            <img className='preview-card-image' src={cat} alt='profile pic'/>
             </div>
         </div>: backgroundStyle === 'gradLeft' ?
         <div className="preview-card"
@@ -53,7 +53,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>
             <div className='preview-card-image-container'>
-            <img className='preview-card-image' src={fox} alt='profile pic'/>
+            <img className='preview-card-image' src={cat} alt='profile pic'/>
             </div>
         </div> : null
         }

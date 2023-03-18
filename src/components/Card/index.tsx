@@ -116,7 +116,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             <div className="layout-two-card"
             style={styles}>
             <div className='layout-two-image-container'>
-            <img className='layout-two-image' src={fox} alt=""/> 
+            <img className='layout-two-image' src={imageUrl} alt=""/> 
             </div>
             <h3 className='layout-two-name'>{name}</h3>
             <p className='layout-two-tagline'>{tagline}</p>
@@ -124,7 +124,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
              <div className="layout-three-card"
              style={styles}>
              <div className='layout-three-image-container'>
-             <img className='layout-three-image' src={fox} alt=""/> 
+             <img className='layout-three-image' src={imageUrl} alt=""/> 
              </div>
              <h3 className='layout-three-name'>{name}</h3>
              <p className='layout-three-tagline'>{tagline}</p>
@@ -132,7 +132,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
               <div className="layout-four-card"
               style={styles}>
               <div className='layout-four-image-container'>
-              <img className='layout-four-image' src={fox} alt=""/> 
+              <img className='layout-four-image' src={imageUrl} alt=""/> 
               </div>
               <h3 className='layout-four-name'>{name}</h3>
               <p className='layout-four-tagline'>{tagline}</p>

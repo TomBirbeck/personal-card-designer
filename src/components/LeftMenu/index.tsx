@@ -2,7 +2,14 @@ import { ChangeEvent, useState, useContext } from 'react'
 import './LeftMenu.css'
 import cardDesignContext from '../../context';
 import { CardContext } from '../../types';
-import fox from '../../assets/fox.jpg'
+import deer from '../../assets/deer.png'
+import bear from '../../assets/bear.png'
+import cat from '../../assets/cat.png'
+import dog from '../../assets/dog.png'
+import hamster from '../../assets/hamster.png'
+import pig from '../../assets/pig.png'
+import panda from '../../assets/panda.png'
+import raccoon from '../../assets/raccoon.png'
 
 const LeftMenu = () => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
@@ -133,8 +140,14 @@ const LeftMenu = () => {
         onChange={handlePicture}
         >
             <option>Choose Avatar</option>
-            <option value={fox}>Fox</option>
-            <option value={'badger'}>Badger</option>
+            <option value={cat}>Cat</option>
+            <option value={dog}>Dog</option>
+            <option value={hamster}>Hamster</option>
+            <option value={panda}>Panda</option>
+            <option value={pig}>Pig</option>
+            <option value={deer}>Deer</option>
+            <option value={bear}>Bear</option>
+            <option value={raccoon}>Raccoon</option>
         </select>
         {/* <label>
         Upload your photo

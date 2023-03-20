@@ -28,7 +28,7 @@ const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
         onChange={handleBackgroundStyle}
         >
             <option value={''}>Background Style</option>
-            <option value={'solid'}>solid</option>
+            <option value={'solid'}>Solid</option>
             <option value={'gradTop'}>Gradient top - bottom</option>
             <option value={'gradLeft'}>Gradient left - right</option>
         </select>

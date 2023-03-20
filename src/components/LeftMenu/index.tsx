@@ -86,10 +86,14 @@ const LeftMenu = () => {
         onChange={handleFont}
         >
             <option>Font</option>
+            <option value={'Amatic SC'}>Amatic SC</option>
             <option value={'Bona Nova'}>Bona Nova</option>
             <option value={'Charm'}>Charm</option>
             <option value={'Libre Baskerville'}>Libre Baskerville</option>
+            <option value={'Lobster Two'}>Lobster</option>
+            <option value={'Rajdhani'}>Rajdhani</option>
             <option value={'Roboto Condensed'}>Roboto Condensed</option>
+            <option value={'Sono'}>Sono</option>
             <option value={'Tangerine'}>Tangerine</option>
         </select>
         <label className='left-menu-labels' htmlFor='font color'>Font Colour

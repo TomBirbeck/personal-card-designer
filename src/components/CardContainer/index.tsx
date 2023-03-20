@@ -71,7 +71,7 @@ const CardContainer = () => {
             <input className="card-inputs" type={'text'} placeholder='Enter Tagline' onChange={handleTagline}></input>
             </label>
         <button className='buttons' onClick={()=> {handleSave(cardProperties)}}>Save</button>
-            <button className="buttons" type="button" onClick={handleDownloadImage}>
+            <button className="buttons download" type="button" onClick={handleDownloadImage}>
             Download
             </button>
             </div>

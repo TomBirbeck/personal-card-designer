@@ -3,7 +3,7 @@
     background-color: rgba(5, 4, 56, 0.836);
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 5fr 2fr;
+    grid-template-rows: 5fr 1fr;
     place-items: center;
     height: 100%;
     max-height: 100%;
@@ -27,5 +27,19 @@
 .buttons {
     align-self: flex-end;
     min-width: 5rem;
-    height: 50%;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
 }
+
+.buttons:hover {
+    scale: 1.1;
+    background-color: yellow;
+}
+
+/* .download {
+    background-color: yellow;
+}
+
+.download:hover {
+    background-color: brown;
+} */

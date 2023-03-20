@@ -3,6 +3,8 @@
 
 :root {
   --primary-blue: #1c1f4a;
+  --secondary-blue: #362b94;
+  --orange: #f1c65b;
 }
 
 *, *::after, *::before {

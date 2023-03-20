@@ -1,6 +1,7 @@
 .container {
     grid-area: card-area;
     background-color: rgba(5, 4, 56, 0.836);
+    background-color: var(--secondary-blue);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 1fr;
@@ -33,7 +34,7 @@
 
 .buttons:hover {
     scale: 1.1;
-    background-color: yellow;
+    background-color: var(--orange);
 }
 
 /* .download {

@@ -51,6 +51,7 @@ const BottomMenu = () => {
             <option value={2}>2px</option>
             <option value={3}>3px</option>
             <option value={4}>4px</option>
+            <option value={5}>5px</option>
         </select>
             <select
         className='selections-bottom'

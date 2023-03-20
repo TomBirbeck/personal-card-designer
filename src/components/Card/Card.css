@@ -9,6 +9,7 @@
     "zone3 zone3 zone3";
     text-align: center;
     overflow:hidden;
+    padding: 0.2rem;
 }
 
 .layout-one-image-container {
@@ -45,6 +46,7 @@
     "zone1 zone3 zone3";
     text-align: center;
     overflow:hidden;
+    padding: 0.2rem;
 }
 
 .layout-two-image-container {
@@ -56,6 +58,7 @@
 }
 .layout-two-image {
     height: 100%;
+    width: 100%;
     place-content: center;
 }
 
@@ -84,6 +87,7 @@
     "zone3 zone3 zone3";
     text-align: center;
     overflow:hidden;
+    padding: 0.2rem;
 }
 
 .layout-three-image-container {
@@ -120,6 +124,7 @@
     "zone3 zone3 zone2";
     text-align: center;
     overflow:hidden;
+    padding: 0.2rem;
 }
 
 .layout-four-image-container {
@@ -132,6 +137,7 @@
 
 .layout-four-image {
     height: 100%;
+    width: 100%;
     place-content: center;
 }
 

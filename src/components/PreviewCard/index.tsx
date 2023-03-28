@@ -49,6 +49,7 @@ const PreviewCard = ({backgroundStyle, backgroundColorOne, backgroundColorTwo, b
         </div>: backgroundStyle === 'gradLeft' ?
         <div className="preview-card"
         style={{backgroundImage: `linear-gradient(to right, ${backgroundColorOne}, ${backgroundColorTwo})`, borderRadius: `${borderRadius}rem`, border: `${borderStyle}`, borderWidth: `${borderWidth}px`, borderColor: `${borderColor}`, color: `${fontColor}` ,fontFamily: `${font}`, fontWeight: `${fontWeight}`}}
+        data-testId = 'gradLeftTest'
         >
             <h3 className='preview-card-name'>Barry Jones</h3>
             <p className='preview-card-tagline'>Just testing things out mate</p>

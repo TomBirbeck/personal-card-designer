@@ -7,31 +7,37 @@ describe('testing for select option headers', () => {
         const header = screen.getByRole('option', {name: 'Layout'})
         expect(header).toBeInTheDocument()
     })
+    
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Size'})
         expect(header).toBeInTheDocument()
     })
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Font'})
         expect(header).toBeInTheDocument()
     })
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Font Size'})
         expect(header).toBeInTheDocument()
     })
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Font Weight'})
         expect(header).toBeInTheDocument()
     })
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Choose Avatar'})
         expect(header).toBeInTheDocument()
     })
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByText('Font Colour')
@@ -51,6 +57,7 @@ describe('tests for options', () => {
         expect(option3).toBeInTheDocument()
         expect(option4).toBeInTheDocument()
     })
+
     test('size options', () => {
         render(<LeftMenu/>)
         const option300 = screen.getByRole('option', {name: '300 x 150'})
@@ -64,6 +71,7 @@ describe('tests for options', () => {
         expect(option400).toBeInTheDocument()
         expect(option450).toBeInTheDocument()
     })
+
     test('font options', () => {
         render(<LeftMenu/>)
         const optionAmatic = screen.getByRole('option', {name: 'Amatic SC'})
@@ -85,6 +93,7 @@ describe('tests for options', () => {
         expect(optionSono).toBeInTheDocument()
         expect(optionTangerine).toBeInTheDocument()
     })
+
     test('font size options', () => {
         render(<LeftMenu/>)
         const option12 = screen.getByRole('option', {name: '12px'})
@@ -105,5 +114,32 @@ describe('tests for options', () => {
         expect(option32).toBeInTheDocument()
     })
 
-})
+    test('font weight options', () => {
+        render(<LeftMenu/>)
+        const normal = screen.getByRole('option', {name: 'Normal'})
+        const bold = screen.getByRole('option', {name: 'Bold'})
+        expect(normal).toBeInTheDocument()
+        expect(bold).toBeInTheDocument()
+    })
 
+    test('avatar options', () => {
+        render(<LeftMenu/>)
+        const cat = screen.getByRole('option', {name: 'Cat'})
+        const dog = screen.getByRole('option', {name: 'Dog'})
+        const hamster = screen.getByRole('option', {name: 'Hamster'})
+        const panda = screen.getByRole('option', {name: 'Panda'})
+        const pig = screen.getByRole('option', {name: 'Pig'})
+        const deer = screen.getByRole('option', {name: 'Deer'})
+        const bear = screen.getByRole('option', {name: 'Bear'})
+        const raccoon = screen.getByRole('option', {name: 'Raccoon'})
+        expect(cat).toBeInTheDocument()
+        expect(dog).toBeInTheDocument()
+        expect(hamster).toBeInTheDocument()
+        expect(panda).toBeInTheDocument()
+        expect(pig).toBeInTheDocument()
+        expect(deer).toBeInTheDocument()
+        expect(bear).toBeInTheDocument()
+        expect(raccoon).toBeInTheDocument()
+    })
+
+})

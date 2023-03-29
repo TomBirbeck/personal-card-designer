@@ -35,7 +35,6 @@ const CardContainer = () => {
             fontSize: cardDesign.fontSize,
         }
         localStorage.setItem('cardStyles', JSON.stringify(cardStyles))
-
     }
 
     const handleDownloadImage = async () => {

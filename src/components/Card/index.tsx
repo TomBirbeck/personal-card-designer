@@ -101,7 +101,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
     }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, imageUrl])
 
     return (
-        <div ref={cardRef}>
+        <div ref={cardRef} data-testId='cardInContainer'>
             {layout === 1?
             <div className="layout-one-card"
             style={styles}

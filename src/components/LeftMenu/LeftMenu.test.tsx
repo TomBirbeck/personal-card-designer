@@ -1,4 +1,5 @@
 import {screen, render} from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import LeftMenu from '.'
 
 describe('testing for select option headers', () => {
@@ -7,7 +8,7 @@ describe('testing for select option headers', () => {
         const header = screen.getByRole('option', {name: 'Layout'})
         expect(header).toBeInTheDocument()
     })
-    
+
     test('layout header renders', () => {
         render(<LeftMenu/>)
         const header = screen.getByRole('option', {name: 'Size'})
@@ -141,5 +142,7 @@ describe('tests for options', () => {
         expect(bear).toBeInTheDocument()
         expect(raccoon).toBeInTheDocument()
     })
-
 })
+
+
+  

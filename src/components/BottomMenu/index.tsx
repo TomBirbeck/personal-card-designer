@@ -28,10 +28,14 @@ const BottomMenu = () => {
 
     return (
         <div className="bottom-menu">
-            <label className="switch">
-                <input type="checkbox" onChange={handleBorder}/>
-                <span className="slider round"></span>
-                </label>
+            {!cardProperties.border ?
+            <button className='border-buttons border-on-button' onClick={handleBorder}>
+                Activate Border!
+            </button> :
+            <button className='border-buttons border-off-button' onClick={handleBorder}>
+                Deactivate Border!
+            </button> 
+            }
             <select
         className='selections-bottom'
         onChange={handleBorderStyle}

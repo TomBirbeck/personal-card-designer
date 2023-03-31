@@ -1,4 +1,5 @@
-import { screen, render } from "@testing-library/react"
+import { screen, render, act, fireEvent } from "@testing-library/react"
+import userEvent from '@testing-library/user-event'
 import CardContainer from "."
 
 test('card renders', () => {

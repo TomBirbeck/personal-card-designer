@@ -3,6 +3,6 @@
     background-color: var(--primary-blue);
     display: grid;
     place-content: center;
-    color: white;
+    color: #67e8f9;
     font-size: 3.5rem;
 }

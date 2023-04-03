@@ -6,12 +6,27 @@
     flex-direction: column;
     gap: 1rem;
     overflow-y: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.right-menu::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar {
+  width: 0.8rem;
+  max-height: 90%;
+}
+
+::-webkit-scrollbar-track {
+    background: #cffafe; 
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #22d3ee;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0e7490; 
+}
+
+::-webkit-scrollbar-button {
+    height: 1rem;
   }
-  

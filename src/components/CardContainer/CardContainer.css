@@ -1,7 +1,6 @@
 .container {
     grid-area: card-area;
-    background-color: rgba(5, 4, 56, 0.836);
-    background-color: var(--secondary-blue);
+    background-color: #0e7490;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 1fr;
@@ -30,17 +29,11 @@
     min-width: 5rem;
     padding: 0.25rem;
     border-radius: 0.25rem;
+    border: none;
 }
 
 .buttons:hover {
     scale: 1.1;
+    border: 1px solid black;
     background-color: var(--orange);
 }
-
-/* .download {
-    background-color: yellow;
-}
-
-.download:hover {
-    background-color: brown;
-} */

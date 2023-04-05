@@ -1,93 +1,26 @@
+import { useEffect, useState } from 'react'
 import PreviewCard from '../PreviewCard'
+import {previewCards} from '../../types'
 import './RightMenu.css'
 
-const people = [{
-    id: 1,
-    backgroundStyle: 'gradLeft',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 0.5,
-    borderWidth: 2,
-    borderColor: '#000000',
-    font: 'Bona Nova',
-    fontSize: 16,
-    fontColor: '#a52a2a',
-    fontWeight: 700,
-},
-{   
-    id: 2,
-    backgroundStyle: 'gradTop',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 0.5,
-    borderWidth: 2,
-    borderColor: '#000000',
-    font: 'Roboto Condensed',
-    fontSize: 22,
-},
-{
-    id: 3,
-    backgroundStyle: 'gradTop',
-    backgroundColorOne: '#ffff76',
-    backgroundColorTwo: '#000000',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 1,
-    borderWidth: 3,
-    borderColor: '#000000'
-},
-{
-    id: 4,
-    backgroundStyle: 'solid',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    font: 'Libre Baskerville',
-    fontSize: 18,
-    fontColor: '#a52a2a',
-    border: false,
-    // borderStyle: 'solid',
-    // borderRadius: 0.5,
-    // borderWidth: 2,
-    // borderColor: '#000000'
-},
-{
-    id: 5,
-    backgroundStyle: 'gradLeft',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    font: 'Libre Baskerville',
-    fontSize: 18,
-    fontColor: '#a52a2a',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 0.5,
-    borderWidth: 2,
-    borderColor: '#000000'
-},
-{
-    id: 6,
-    backgroundStyle: 'gradLeft',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    font: 'Libre Baskerville',
-    fontSize: 18,
-    fontColor: '#a52a2a',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 0.5,
-    borderWidth: 2,
-    borderColor: '#000000'
-},
-]
-
 const RightMenu = () => {
+    const [designs, setDesigns] = useState<previewCards[]>([])
+
+    const getDesigns = async () => {
+        const res = await fetch('http://localhost:3001/designs')
+        const data = await res.json()
+        console.log(data.data)
+        setDesigns(data.data)
+    }
+
+    useEffect(() => {
+        getDesigns()
+    },[])
+
     return (
         <div className='right-menu'>
-            {people.map((person) => { return (
+            { designs.length > 1 &&
+            designs.map((person) => { return (
                 <PreviewCard 
                 key={person.id}
                 backgroundStyle={person.backgroundStyle}

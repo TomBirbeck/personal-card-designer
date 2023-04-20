@@ -1,23 +1,9 @@
-// import { useEffect, useState } from 'react'
 import PreviewCard from '../PreviewCard'
-// import {previewCards} from '../../types'
 import './RightMenu.css'
 import { people } from '../../utilities/sampleData'
 
 const RightMenu = () => {
-    // const [designs, setDesigns] = useState<previewCards[]>([])
     const designs = people
-
-    // const getDesigns = async () => {
-    //     const res = await fetch('http://localhost:3001/designs')
-    //     const data = await res.json()
-    //     console.log(data.data)
-    //     setDesigns(data.data)
-    // }
-
-    // useEffect(() => {
-    //     getDesigns()
-    // },[])
 
     return (
         <div className='right-menu'>

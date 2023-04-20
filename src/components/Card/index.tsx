@@ -97,7 +97,9 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
                 backgroundImage: `linear-gradient(to right,${backgroundColorOne}, ${backgroundColorTwo})`,
                 imageUrl: `${imageUrl}`
             })}
-    }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, imageUrl])
+    }, 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, imageUrl])
 
     return (
         <div ref={cardRef} data-testid='cardInContainer'>

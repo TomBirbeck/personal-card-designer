@@ -1,4 +1,4 @@
-import { ChangeEvent, useState, useContext } from 'react'
+import { ChangeEvent, useContext } from 'react'
 import './LeftMenu.css'
 import cardDesignContext from '../../context';
 import deer from '../../assets/deer.png'
@@ -12,7 +12,6 @@ import raccoon from '../../assets/raccoon.png'
 
 const LeftMenu = () => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
-    // const [image, setImage] = useState()
 
     const handleLayout = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, layout: Number(e.target.value)})
@@ -37,27 +36,11 @@ const LeftMenu = () => {
     const handleFontWeight = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, fontWeight: Number(e.target.value)})
     }
-    
-    const handleTextAlign = (e: ChangeEvent<HTMLSelectElement>) => {
-        setCardProperties({...cardProperties, font: e.target.value})
-    }
-
-    // const handleImage = (e: any) => {
-    //     setImage(e.target.value)
-    //     setCardProperties({...cardProperties, imageUrl: e.target.value})
-    // }
 
     const handlePicture = (e: ChangeEvent<HTMLSelectElement>) => {
         setCardProperties({...cardProperties, imageUrl: e.target.value})
     }
-  
 
-    // const stored = localStorage.getItem('cardStyles')
-
-    // if (stored) {
-
-    //     console.log(JSON.parse(stored))
-    // }
 
     return (<div className="left-menu">
         <select
@@ -135,11 +118,6 @@ const LeftMenu = () => {
             <option value={bear}>Bear</option>
             <option value={raccoon}>Raccoon</option>
         </select>
-        {/* <label>
-        Upload your photo
-        <input style={{width: '5rem'}} type='file' accept='image/*' onChange={handleImage}/>
-        </label> */}
-        {/* <button className='buttons'>Download</button> */}
     </div>
     )
 }

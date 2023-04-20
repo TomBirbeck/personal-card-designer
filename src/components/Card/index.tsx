@@ -1,7 +1,6 @@
 import './Card.css'
 import { useContext, useEffect, useState} from "react"
 import cardDesignContext from "../../context"
-import fox from '../../assets/fox.jpg'
 import { CardIProps } from '../../types'
 
 
@@ -106,8 +105,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             <div className="layout-one-card"
             style={styles}
             >
-            <div className='layout-one-image-container'>
-            <img className='layout-one-image' src={imageUrl} alt=""/> 
+            <div className='layout-one-image-container'style={{backgroundImage: `url(${imageUrl})`}}>
             </div>
             <h3 className='layout-one-name'>{name}</h3>
             <p className='layout-one-tagline'>{tagline}</p>
@@ -115,24 +113,24 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             : layout === 2 ?
             <div className="layout-two-card"
             style={styles}>
-            <div className='layout-two-image-container'>
-            <img className='layout-two-image' src={imageUrl} alt=""/> 
+            <div className='layout-two-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
+            {/* <img className='layout-two-image' src={imageUrl} alt=""/>  */}
             </div>
             <h3 className='layout-two-name'>{name}</h3>
             <p className='layout-two-tagline'>{tagline}</p>
              </div>: layout === 3 ?
              <div className="layout-three-card"
              style={styles}>
-             <div className='layout-three-image-container'>
-             <img className='layout-three-image' src={imageUrl} alt=""/> 
+             <div className='layout-three-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
+             {/* <img className='layout-three-image' src={imageUrl} alt=""/>  */}
              </div>
              <h3 className='layout-three-name'>{name}</h3>
              <p className='layout-three-tagline'>{tagline}</p>
               </div> :
               <div className="layout-four-card"
               style={styles}>
-              <div className='layout-four-image-container'>
-              <img className='layout-four-image' src={imageUrl} alt=""/> 
+              <div className='layout-four-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
+              {/* <img className='layout-four-image' src={imageUrl} alt=""/>  */}
               </div>
               <h3 className='layout-four-name'>{name}</h3>
               <p className='layout-four-tagline'>{tagline}</p>

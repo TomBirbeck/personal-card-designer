@@ -100,7 +100,7 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
     }, [backgroundColorOne, height, width, font, fontSize, fontWeight, textAlign, borderType, borderRadius, backgroundColorTwo, backgroundStyle, fontColor, imageUrl])
 
     return (
-        <div ref={cardRef} data-testId='cardInContainer'>
+        <div ref={cardRef} data-testid='cardInContainer'>
             {layout === 1?
             <div className="layout-one-card"
             style={styles}
@@ -114,7 +114,6 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
             <div className="layout-two-card"
             style={styles}>
             <div className='layout-two-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
-            {/* <img className='layout-two-image' src={imageUrl} alt=""/>  */}
             </div>
             <h3 className='layout-two-name'>{name}</h3>
             <p className='layout-two-tagline'>{tagline}</p>
@@ -122,7 +121,6 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
              <div className="layout-three-card"
              style={styles}>
              <div className='layout-three-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
-             {/* <img className='layout-three-image' src={imageUrl} alt=""/>  */}
              </div>
              <h3 className='layout-three-name'>{name}</h3>
              <p className='layout-three-tagline'>{tagline}</p>
@@ -130,7 +128,6 @@ const Card = ({name, tagline, cardRef}: CardIProps) => {
               <div className="layout-four-card"
               style={styles}>
               <div className='layout-four-image-container' style={{backgroundImage: `url(${imageUrl})`}}>
-              {/* <img className='layout-four-image' src={imageUrl} alt=""/>  */}
               </div>
               <h3 className='layout-four-name'>{name}</h3>
               <p className='layout-four-tagline'>{tagline}</p>

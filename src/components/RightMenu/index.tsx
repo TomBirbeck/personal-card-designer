@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import PreviewCard from '../PreviewCard'
 // import {previewCards} from '../../types'
 import './RightMenu.css'

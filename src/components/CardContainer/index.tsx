@@ -8,7 +8,7 @@ import cardDesignContext from "../../context"
 const CardContainer = () => {
     const [name, setName] = useState<string>('John Johnson')
     const [tagline, setTagline] = useState<string>('Wow! Such tagline')
-    const [cardProperties, setCardProperties] = useContext(cardDesignContext)
+    const [cardProperties] = useContext(cardDesignContext)
     const cardRef = useRef(null)
 
 

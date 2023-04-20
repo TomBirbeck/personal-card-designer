@@ -14,9 +14,9 @@
 
 .layout-one-image-container {
     grid-area: zone1;
-    height: 10rem;
+    height: 6.5rem;
     background-position: center;
-    background-size:100%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 
@@ -89,9 +89,9 @@
 
 .layout-three-image-container {
     grid-area: zone2;
-    height: 10rem;
+    height: 6.5rem;
     background-position: center;
-    background-size: 100%;
+    background-size: 80%;
     background-repeat: no-repeat;
 }
 .layout-three-image {

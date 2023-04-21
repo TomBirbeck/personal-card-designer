@@ -149,3 +149,18 @@
     height: 50%;
     word-wrap: break-word;
 }
+
+@media screen and (max-width: 800px) {
+    .layout-one-card {
+        scale:0.8;
+    }
+    .layout-two-card {
+        scale:0.8;
+    }
+    .layout-three-card {
+        scale:0.8;
+    }
+    .layout-four-card {
+        scale:0.8;
+    }
+}

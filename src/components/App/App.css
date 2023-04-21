@@ -10,7 +10,13 @@
   "left-menu bottom-menu bottom-menu bottom-menu right-menu";
 }
 
-
+@media screen and (max-width: 800px) {
+  .App{
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

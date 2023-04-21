@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BottomMenu from '../BottomMenu';
 import CardContainer from '../CardContainer';
 import Header from '../Header';
@@ -10,6 +10,7 @@ import cardDesignContext from '../../context';
 import pig from '../../assets/pig.png'
 
 function App() {
+  const [widowSize, setWindowSize] = useState<number>(window.innerWidth)
   const cardProperties = useState({
     layout : 1,
     height: 150,
@@ -29,6 +30,17 @@ function App() {
     backgroundColorTwo: '',
     imageUrl: pig
   })
+
+  useEffect(()=>{
+    const handleResizeWindow = () => setWindowSize(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  },[])
+
   return (
     <cardDesignContext.Provider value={cardProperties}>
     <div className="App">
@@ -36,7 +48,8 @@ function App() {
      <TopMenu/>
      <LeftMenu/>
      <CardContainer/>
-     <RightMenu/>
+     {widowSize >= 800 ?
+     <RightMenu/> : null}
      <BottomMenu/>
     </div>
     </cardDesignContext.Provider>

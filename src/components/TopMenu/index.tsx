@@ -4,20 +4,16 @@ import '../TopMenu/TopMenu.css'
 
 const TopMenu = () => {
     const [cardProperties, setCardProperties] = useContext(cardDesignContext)
-    const [test, setTest] = useState({backgroundStyle: 'solid', backgroundColorOne: '', backgroundColorTwo: ''})
 
     const handleBackgroundStyle = (e: ChangeEvent<HTMLSelectElement>) => {
-    setTest({...test, backgroundStyle: e.target.value})
     setCardProperties({...cardProperties, backgroundStyle: e.target.value})
 }
 
 const handleBackgroundColorOne = (e: ChangeEvent<HTMLInputElement>) => {
-    setTest({...test, backgroundColorOne: e.target.value})
     setCardProperties({...cardProperties, backgroundColorOne: e.target.value})
 }
 
 const handleBackgroundColorTwo = (e: ChangeEvent<HTMLInputElement>) => {
-    setTest({...test, backgroundColorTwo: e.target.value})
     setCardProperties({...cardProperties, backgroundColorTwo: e.target.value})
     }
 

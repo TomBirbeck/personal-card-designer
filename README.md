@@ -1,6 +1,67 @@
-# Getting Started with Create React App
+# U-card
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app enables users to create a personal card with a name and tagline, with several in-built avatars available.
+
+## App structure
+
+### App
+Contains the initial context state and checks the screen size.\
+Responsible for rendering the correct components on screen, the right hand menu with suggested designs will only render on larger screens.
+
+### Top Menu
+
+Uses the cardDesignContext for the cardProperties state. Contains the options for:
+- Background style
+- Background color 1
+- Background color 2
+
+Will update the context when changes are made, using the handle functions contained in the component
+
+### Left Menu
+
+Uses the cardDesignContext for the cardProperties state. Contains the options for the:
+- Layout
+- Size
+- Font
+- Font Size
+- Font Weight
+- Font Color
+- Avatar
+
+Will update the context when changes are made, using the handle functions contained in the component.
+
+### Bottom Menu
+
+Uses the cardDesignContext for the cardProperties state. Contains the options for the:
+- Border activation
+- Border style
+- Border width
+- Border radius
+- Border Color
+
+Will update the context when changes are made, using the handle functions contained in the component.
+
+### Right Menu
+
+Currently uses the sample data to provide the props needed for the preview cards. Supplies the following props for the preview cards:
+- key
+- backgroundStyle
+- backgroundColorOne
+- backgroundColorTwo
+- border
+- borderRadius
+- borderStyle
+- borderWidth
+- borderColor
+- font
+- fontSize
+- fontColor
+- fontWeight
+
+Will update the card displayed and the context when changes are made, using the handle functions contained in the component.
+
+### Context
+The design choices made by a user are stored in the cardDesignContext, this is updated when any changes happen.
 
 ## Available Scripts
 
@@ -28,19 +89,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

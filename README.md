@@ -1,3 +1,19 @@
+# Table of Contents
+
+- [Overview](#u-card)
+- [AppStructure](#app-structure)
+- [App](#app)
+- [Top Menu](#top-menu)
+- [Left Menu](#left-menu)
+- [Bottom Menu](#bottom-menu)
+- [Right Menu](#right-menu)
+- [Card Container](#card-container)
+- [Card](#card)
+- [Context](#context)
+- [Types](#types)
+- [Installation](#using-this-codebase)
+- [Scripts](#available-scripts)
+
 # U-card
 
 This app enables users to create a personal card with a name and tagline, with several in-built avatars available.
@@ -60,8 +76,33 @@ Currently uses the sample data to provide the props needed for the preview cards
 
 Will update the card displayed and the context when changes are made, using the handle functions contained in the component.
 
+### Card Container
+
+Contains states to store the name and tagline of the user, gets cardProperties from the cardDesignContext, and has a cardRef to be used when a user wants to download their card. \
+This component is responsible for rendering the Card component and the save and download buttons.\
+When a user clicks to download the card design will be drawn onto a html canvas and downloaded to their device.\
+Card container passes down the following props to the Card component.
+- name
+- tagline
+- cardRef
+
+### Card
+
+This component tkes in the props of name, tagline and cardRef.\
+It creates Props using the cardDesignContext and then deconstructs this to get the states needed for each design variable.\
+It has two useEffects that run when the state changes. The first one checks whether or not the border is active and one which checks which background style hs been chosen by the user. This information then determines how the card is rendered on the screen.\
+The component uses conditional rendering to and inline CSS to display the correct card design.
+
 ### Context
 The design choices made by a user are stored in the cardDesignContext, this is updated when any changes happen.
+
+### Types
+
+This file contains the different types required in the components throughout the app. 
+
+## Using this codebase
+
+To use or adapt this code yourself you will need to clone the repositiory and then run nmp i in your terminal to install the dependencies.
 
 ## Available Scripts
 

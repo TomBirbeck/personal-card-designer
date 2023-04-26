@@ -2,7 +2,7 @@ export const people = [{
     id: 1,
     backgroundStyle: 'gradLeft',
     backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
+    backgroundColorTwo: '#27d39f',
     border: true,
     borderStyle: 'solid',
     borderRadius: 0.5,
@@ -10,11 +10,25 @@ export const people = [{
     borderColor: '#000000',
     font: 'Bona Nova',
     fontSize: 16,
-    fontColor: '#a52a2a',
+    fontColor: '#000000',
     fontWeight: 700,
 },
-{   
+{
     id: 2,
+    backgroundStyle: 'gradTop',
+    backgroundColorOne: '#560a5c',
+    backgroundColorTwo: '#000000',
+    font: 'Libre Baskerville',
+    fontSize: 18,
+    fontColor: '#ffffff',
+    border: true,
+    borderStyle: 'solid',
+    borderRadius: 1,
+    borderWidth: 2,
+    borderColor: '#ffffff'
+},
+{   
+    id: 3,
     backgroundStyle: 'gradTop',
     backgroundColorOne: '#ffffff',
     backgroundColorTwo: '#000000',
@@ -27,7 +41,7 @@ export const people = [{
     fontSize: 22,
 },
 {
-    id: 3,
+    id: 4,
     backgroundStyle: 'gradTop',
     backgroundColorOne: '#ffff76',
     backgroundColorTwo: '#000000',
@@ -38,7 +52,7 @@ export const people = [{
     borderColor: '#000000'
 },
 {
-    id: 4,
+    id: 5,
     backgroundStyle: 'solid',
     backgroundColorOne: '#ffffff',
     backgroundColorTwo: '#000000',
@@ -46,24 +60,6 @@ export const people = [{
     fontSize: 18,
     fontColor: '#a52a2a',
     border: false,
-    // borderStyle: 'solid',
-    // borderRadius: 0.5,
-    // borderWidth: 2,
-    // borderColor: '#000000'
-},
-{
-    id: 5,
-    backgroundStyle: 'gradLeft',
-    backgroundColorOne: '#ffffff',
-    backgroundColorTwo: '#000000',
-    font: 'Libre Baskerville',
-    fontSize: 18,
-    fontColor: '#a52a2a',
-    border: true,
-    borderStyle: 'solid',
-    borderRadius: 0.5,
-    borderWidth: 2,
-    borderColor: '#000000'
 },
 {
     id: 6,
